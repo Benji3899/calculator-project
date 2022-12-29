@@ -1,0 +1,16 @@
+/* Variabes */  
+$colours :(
+    white: #ffffff,
+    black: #141313,
+    dark-green:#335454,
+    grey: #cfcdcd
+);
+
+@each $colour, $hex in $colours{
+    .color-#{$colour}{
+color: $hex;
+    }
+    .bg-#{$colour}{
+        background-color: $hex;
+    }
+}
